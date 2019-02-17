@@ -3,6 +3,7 @@ package uk.co.incircity.model;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 import java.util.Optional;
 
 public class Contact {
@@ -44,6 +45,21 @@ public class Contact {
                 ", sex=" + sex +
                 ", dateOfBirth=" + dateOfBirth +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Contact contact = (Contact) o;
+        return sex == contact.sex &&
+                Objects.equals(name, contact.name) &&
+                Objects.equals(dateOfBirth, contact.dateOfBirth);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, sex, dateOfBirth);
     }
 
     public String getName() {
