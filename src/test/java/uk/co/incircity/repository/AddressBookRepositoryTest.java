@@ -17,7 +17,9 @@ public class AddressBookRepositoryTest {
     @Test
     public void testRepo() {
 
-        assertEquals(5, repository.getAddressBookLineList().stream().count());
+        repository.getContactList().stream().forEach(System.out::println);
+
+        assertEquals(5, repository.getContactList().stream().count());
 
     }
 }
