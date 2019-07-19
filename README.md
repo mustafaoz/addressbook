@@ -1,4 +1,4 @@
-# A basic Spring Boot Application for Gumtree coding challenge
+# A basic Spring Boot Application for Address Book Scenario
 
 This is a [Spring Boot](http://projects.spring.io/spring-boot/) application.
 It exposes one API called stats.
